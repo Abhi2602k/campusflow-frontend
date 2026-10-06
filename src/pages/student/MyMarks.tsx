@@ -13,7 +13,7 @@ export default function MyMarks() {
     api.get('/marks/my-marks').then(res => {
       setData(res.data);
       setLoading(false);
-    }).catch(err => {
+    }).catch(_err => {
       setError('Failed to load report card. You may need to login again.');
       setLoading(false);
     });

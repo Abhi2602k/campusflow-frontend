@@ -18,7 +18,7 @@ export default function ViewReportCard() {
     api.get(`/marks/report-card/${id}`).then(res => {
       setData(res.data);
       setLoading(false);
-    }).catch(err => {
+    }).catch(_err => {
       setError('Failed to load report card. You may need to login again.');
       setLoading(false);
     });

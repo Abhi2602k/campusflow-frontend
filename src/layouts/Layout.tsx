@@ -71,7 +71,7 @@ export default function Layout() {
               <NavItem to="/admin/assignments" icon={FileBarChart} label="Faculty Assignment" />
               
               <SectionTitle>Administration</SectionTitle>
-              <NavItem to="/admin/import-students" className="hidden" icon={Users} label="Bulk Import" />
+              <NavItem to="/admin/import-students" icon={Users} label="Bulk Import" />
               <NavItem to="/admin/program-leaders" icon={Shield} label="Program Leaders" />
               <NavItem to="/admin/reports" icon={PieChart} label="Reports" />
             </>

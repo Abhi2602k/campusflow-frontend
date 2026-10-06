@@ -88,6 +88,12 @@ export default function ManageMarks() {
     }
   };
 
+  const loadAssessments = (sub: string, sec: string) => {
+    api.get(`/marks/assessments?section_id=${sec}&subject_id=${sub}`)
+      .then(res => setAssessments(res.data))
+      .catch(console.error);
+  };
+
   const [isDeleting, setIsDeleting] = useState(false);
   const handleDeleteAssessment = async () => {
     if (!selectedAssessment || isDeleting) return;

@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { api } from '../api';
 
-type User = { id: string; email: string; name: string; role: 'ADMIN' | 'FACULTY' };
+type User = { id: string; email: string; name: string; role: string };
 type AuthContextType = { user: User | null; loading: boolean; login: (data: any) => Promise<void>; logout: () => Promise<void> };
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
