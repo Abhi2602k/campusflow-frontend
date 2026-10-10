@@ -17,9 +17,7 @@ export default function BulkFacultyImport() {
     const formData = new FormData();
     formData.append('file', file);
     try {
-      const res = await api.post('/management/faculty/import/validate', formData, {
-        headers: { 'Content-Type': 'multipart/form-data' }
-      });
+      const res = await api.post('/management/faculty/import/validate', formData);
       setPreview(res.data);
     } catch (err: any) {
       setMessage(err.response?.data?.detail || "Validation failed");

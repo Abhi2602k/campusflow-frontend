@@ -51,9 +51,7 @@ export default function BulkStudentImport() {
     formData.append('section_id', allocation.section_id);
     
     try {
-      const res = await api.post('/management/students/import/validate', formData, {
-        headers: { 'Content-Type': 'multipart/form-data' }
-      });
+      const res = await api.post('/management/students/import/validate', formData);
       setPreview(res.data);
     } catch (err: any) {
       setMessage(err.response?.data?.detail || "Validation failed");
